@@ -1,0 +1,17 @@
+{
+  "name": "Our Story",
+  "short_name": "Our Story",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff6fb",
+  "theme_color": "#fff6fb",
+  "icons": [
+    {
+      "src": "assets/wedding.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

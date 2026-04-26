@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fff6fb">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Our Story</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <canvas id="gameCanvas" aria-label="Our Story romantic walking game"></canvas>
+
+    <header class="hud">
+      <h1>Our Story</h1>
+      <div class="year" id="yearLabel">2010</div>
+    </header>
+
+    <div class="tip" id="tip">Hold or drag to walk</div>
+    <div class="error" id="errorBox"></div>
+
+    <div class="pad" aria-label="Game controls">
+      <button class="pad-btn" id="leftBtn" type="button">‹</button>
+      <button class="pad-btn" id="jumpBtn" type="button">↑</button>
+      <button class="pad-btn" id="rightBtn" type="button">›</button>
+    </div>
+
+    <footer class="controls">
+      <button id="backBtn" type="button">Back</button>
+      <div class="bar"><div id="barFill"></div></div>
+      <button id="nextBtn" type="button">Next</button>
+    </footer>
+  </main>
+
+  <section class="ending" id="ending">
+    <div class="ending-card">
+      <img src="assets/wedding.jpg" alt="Wedding memory">
+      <div class="ending-hearts">♥ ♥</div>
+      <h2>Marriage 2025</h2>
+      <p>After all odds, we chose each other forever.</p>
+      <button id="restartBtn" type="button">Play Again</button>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+  <script>
+    if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
+</body>
+</html>
