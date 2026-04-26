@@ -357,9 +357,10 @@ function boyStyle() {
 function drawPerson(actor, style) {
   const bob = Math.sin(actor.walk * 2) * 2;
   const leg = Math.sin(actor.walk) * 11;
+  const scale = w <= 620 ? 0.82 : 1;
   ctx.save();
   ctx.translate(actor.x, actor.y + bob);
-  ctx.scale(actor.facing, 1);
+  ctx.scale(actor.facing * scale, scale);
 
   ctx.fillStyle = "rgba(105, 73, 97, 0.16)";
   ctx.beginPath();
@@ -463,7 +464,7 @@ function drawPerson(actor, style) {
   ctx.stroke();
   ctx.restore();
 
-  drawNameTag(actor.x, actor.y - 132 + bob, style.name);
+  drawNameTag(actor.x, actor.y - (132 * scale) + bob, style.name);
 }
 
 function drawNameTag(x, y, name) {

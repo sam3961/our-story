@@ -1,9 +1,9 @@
-const CACHE_NAME = "our-story-v5";
+const CACHE_NAME = "our-story-v6";
 const FILES = [
   "index.html",
-  "style.css?v=5",
-  "game.js?v=5",
-  "manifest.webmanifest?v=5",
+  "style.css?v=6",
+  "game.js?v=6",
+  "manifest.webmanifest?v=6",
   "assets/wedding.jpg"
 ];
 
