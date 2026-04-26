@@ -357,7 +357,7 @@ function boyStyle() {
 function drawPerson(actor, style) {
   const bob = Math.sin(actor.walk * 2) * 2;
   const leg = Math.sin(actor.walk) * 11;
-  const scale = w <= 620 ? 0.82 : 1;
+  const scale = w <= 520 ? 0.62 : w <= 760 ? 0.74 : 1;
   ctx.save();
   ctx.translate(actor.x, actor.y + bob);
   ctx.scale(actor.facing * scale, scale);
@@ -464,17 +464,18 @@ function drawPerson(actor, style) {
   ctx.stroke();
   ctx.restore();
 
-  drawNameTag(actor.x, actor.y - (132 * scale) + bob, style.name);
+  drawNameTag(actor.x, actor.y - (122 * scale) + bob, style.name, scale);
 }
 
-function drawNameTag(x, y, name) {
+function drawNameTag(x, y, name, scale) {
   if (!name) return;
   ctx.save();
-  ctx.font = "900 15px Trebuchet MS, Arial";
+  ctx.font = `900 ${Math.max(11, 15 * scale)}px Trebuchet MS, Arial`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  const width = ctx.measureText(name).width + 24;
-  roundRect(x - width / 2, y - 14, width, 28, 14, "rgba(255,255,255,0.78)");
+  const width = ctx.measureText(name).width + 18;
+  const height = Math.max(20, 28 * scale);
+  roundRect(x - width / 2, y - height / 2, width, height, height / 2, "rgba(255,255,255,0.78)");
   ctx.fillStyle = "#f66f9e";
   ctx.fillText(name, x, y);
   ctx.restore();
