@@ -265,9 +265,20 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  .hud {
+    gap: 6px;
+    padding-left: max(8px, env(safe-area-inset-left));
+    padding-right: max(8px, env(safe-area-inset-right));
+  }
+
+  h1 {
+    font-size: clamp(1.25rem, 5.6vw, 1.7rem);
+  }
+
   .year {
-    min-width: 82px;
-    font-size: 0.82rem;
+    min-width: 58px;
+    padding: 6px 8px;
+    font-size: 0.68rem;
   }
 
   .tip {
@@ -288,22 +299,44 @@ h1 {
   }
 
   .controls {
-    gap: 8px;
-    top: auto;
-    bottom: calc(82px + env(safe-area-inset-bottom));
+    top: calc(13px + env(safe-area-inset-top));
+    bottom: auto;
+    gap: 5px;
   }
 
   button {
-    min-width: 72px;
-    padding: 11px 12px;
+    min-width: 46px;
+    padding: 7px 8px;
+    font-size: 0.72rem;
+    box-shadow: 0 4px 0 #f3a4c4;
   }
 
   .bar {
-    width: 76px;
+    width: 42px;
+    height: 8px;
+    border-width: 1px;
   }
 
   .ending img {
     width: min(58vw, 210px);
+  }
+}
+
+@media (min-width: 521px) and (max-width: 760px) {
+  .controls {
+    top: calc(16px + env(safe-area-inset-top));
+    gap: 6px;
+  }
+
+  .controls button {
+    min-width: 54px;
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  .controls .bar {
+    width: 56px;
+    height: 9px;
   }
 }
 

@@ -7,8 +7,8 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Our Story</title>
-  <link rel="manifest" href="manifest.webmanifest?v=4">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="manifest" href="manifest.webmanifest?v=5">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <main class="game">
@@ -23,12 +23,12 @@
     <div class="error" id="errorBox"></div>
 
     <div class="move-pad" aria-label="Move controls">
-      <button class="pad-btn" id="leftBtn" type="button">‹</button>
-      <button class="pad-btn" id="rightBtn" type="button">›</button>
+      <button class="pad-btn" id="leftBtn" type="button">&lsaquo;</button>
+      <button class="pad-btn" id="rightBtn" type="button">&rsaquo;</button>
     </div>
 
     <div class="jump-pad" aria-label="Jump control">
-      <button class="pad-btn jump" id="jumpBtn" type="button">↑</button>
+      <button class="pad-btn jump" id="jumpBtn" type="button">&uarr;</button>
     </div>
 
     <footer class="controls">
@@ -41,14 +41,14 @@
   <section class="ending" id="ending">
     <div class="ending-card">
       <img src="assets/wedding.jpg" alt="Wedding memory">
-      <div class="ending-hearts">♥ ♥</div>
+      <div class="ending-hearts">&hearts; &hearts;</div>
       <h2>Marriage 2025</h2>
       <p>After all odds, we chose each other forever.</p>
       <button id="restartBtn" type="button">Play Again</button>
     </div>
   </section>
 
-  <script src="game.js?v=4"></script>
+  <script src="game.js?v=5"></script>
   <script>
     if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
       window.addEventListener("load", () => {
