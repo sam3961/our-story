@@ -166,7 +166,8 @@ h1 {
 .controls {
   position: absolute;
   left: 50%;
-  bottom: calc(92px + env(safe-area-inset-bottom));
+  top: calc(74px + env(safe-area-inset-top));
+  bottom: auto;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -288,6 +289,7 @@ h1 {
 
   .controls {
     gap: 8px;
+    top: auto;
     bottom: calc(82px + env(safe-area-inset-bottom));
   }
 
