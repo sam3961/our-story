@@ -342,6 +342,20 @@ h1 {
   }
 }
 
+@media (pointer: coarse), (max-height: 520px) {
+  .tip {
+    bottom: calc(30px + env(safe-area-inset-bottom));
+    width: min(42vw, 360px);
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+
+  .move-pad,
+  .jump-pad {
+    bottom: calc(18px + env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-height: 620px) {
   .ending img {
     width: min(42vw, 190px);
