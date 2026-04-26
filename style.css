@@ -123,14 +123,21 @@ h1 {
   display: block;
 }
 
-.pad {
+.move-pad,
+.jump-pad {
   position: absolute;
-  left: 50%;
-  bottom: calc(134px + env(safe-area-inset-bottom));
+  bottom: calc(28px + env(safe-area-inset-bottom));
   z-index: 2;
   display: flex;
   gap: 12px;
-  transform: translateX(-50%);
+}
+
+.move-pad {
+  left: max(16px, env(safe-area-inset-left));
+}
+
+.jump-pad {
+  right: max(16px, env(safe-area-inset-right));
 }
 
 .pad-btn {
@@ -148,10 +155,18 @@ h1 {
   user-select: none;
 }
 
+.pad-btn.jump {
+  width: 62px;
+  min-width: 62px;
+  height: 62px;
+  background: rgba(255, 221, 126, 0.9);
+  box-shadow: 0 6px 0 #e7b64b;
+}
+
 .controls {
   position: absolute;
   left: 50%;
-  bottom: calc(14px + env(safe-area-inset-bottom));
+  bottom: calc(22px + env(safe-area-inset-bottom));
   z-index: 2;
   display: flex;
   align-items: center;
@@ -255,12 +270,13 @@ h1 {
   }
 
   .tip {
-    bottom: calc(74px + env(safe-area-inset-bottom));
+    bottom: calc(92px + env(safe-area-inset-bottom));
     font-size: 0.78rem;
   }
 
-  .pad {
-    bottom: calc(118px + env(safe-area-inset-bottom));
+  .move-pad,
+  .jump-pad {
+    bottom: calc(20px + env(safe-area-inset-bottom));
     gap: 9px;
   }
 
@@ -282,6 +298,10 @@ h1 {
 
   .bar {
     width: 76px;
+  }
+
+  .controls {
+    bottom: calc(82px + env(safe-area-inset-bottom));
   }
 
   .ending img {
