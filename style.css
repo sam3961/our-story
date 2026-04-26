@@ -89,7 +89,7 @@ h1 {
 .tip {
   position: absolute;
   left: 50%;
-  bottom: calc(86px + env(safe-area-inset-bottom));
+  bottom: calc(112px + env(safe-area-inset-bottom));
   z-index: 2;
   width: min(90vw, 480px);
   padding: 9px 14px;
@@ -166,7 +166,7 @@ h1 {
 .controls {
   position: absolute;
   left: 50%;
-  bottom: calc(22px + env(safe-area-inset-bottom));
+  bottom: calc(92px + env(safe-area-inset-bottom));
   z-index: 2;
   display: flex;
   align-items: center;
@@ -288,7 +288,7 @@ h1 {
 
   .controls {
     gap: 8px;
-    bottom: calc(10px + env(safe-area-inset-bottom));
+    bottom: calc(82px + env(safe-area-inset-bottom));
   }
 
   button {
@@ -298,10 +298,6 @@ h1 {
 
   .bar {
     width: 76px;
-  }
-
-  .controls {
-    bottom: calc(82px + env(safe-area-inset-bottom));
   }
 
   .ending img {
